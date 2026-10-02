@@ -39,7 +39,10 @@ def send_message(chat_id, text):
     data = json.dumps({
     "chat_id": chat_id,
     "text": text,
-    "parse_mode": "HTML"
+    "parse_mode": "HTML",
+    "link_preview_options": {
+        "is_disabled": True
+    }
 }).encode("utf-8")
 
     request = Request(
